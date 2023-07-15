@@ -1,14 +1,16 @@
 import sys
-def transEntry():
+
+
+def trans_entry():
     while True:
-        transCode = input("""
+        trans_code = input("""
         1) Transfer Money
         2) Withdraw Money
         3) Airtime and Bundles
         4) My Wallet
 
         Select Transaction: """)
-        if transCode == "1":
+        if trans_code == "1":
             while True:
                 print("""
                 1) Momo User
@@ -50,7 +52,7 @@ def transEntry():
                     break
                 else:
                     print("Invalid choice. Please try again.")
-        elif transCode == "2":
+        elif trans_code == "2":
             while True:
                 print("""
                 1) From Agent
@@ -62,8 +64,8 @@ def transEntry():
                         number = input("Enter the Agent Number: ")
                         if len(number) == 6 and number.isdigit():
                             amount = input("Amount: ")
-                            PIN = input("Enter your 4-digit pin: ")
-                            if len(PIN) == 4 and PIN.isdigit():
+                            pin = input("Enter your 4-digit pin: ")
+                            if len(pin) == 4 and pin.isdigit():
                                 print(amount, "withdrawn from Agent Number:", number)
                                 sys.exit()
                         else:
@@ -74,12 +76,12 @@ def transEntry():
                         number = input("Enter the ATM Number: ")
                         if len(number) == 10 and number.isdigit():
                             amount = input("Amount: ")
-                            PIN = input("Enter a 4-digit PIN: ")
-                            if len(PIN) == 4 and PIN.isdigit():
+                            pin = input("Enter a 4-digit pin: ")
+                            if len(pin) == 4 and pin.isdigit():
                                 print(amount, "withdrawn from ATM", number)
                                 sys.exit()
                             else:
-                                print("Invalid PIN. Please try again.")
+                                print("Invalid pin. Please try again.")
                         else:
                             print("Invalid ATM Number. Please try again.")
                 elif choice == "0":
@@ -87,7 +89,7 @@ def transEntry():
                     break
                 else:
                     print("Invalid choice. Please try again.")
-        elif transCode == "3":
+        elif trans_code == "3":
             while True:
                 print("""
                 1) Airtime
@@ -97,27 +99,55 @@ def transEntry():
                 0) Back""")
                 choice = input("Enter your choice: ")
                 if choice == "1":
-                    print("Airtime and Bundles - Airtime")
-                    # Perform the desired action for purchasing airtime
-                    # Add your code here
+                    while True:
+                        my_choice = input("1. Buy Airtime\n2. Check Balance\n")
+                        if my_choice == "1":
+                            amount = input("Amount: ")
+                            print(amount, "has been purchased to your account")
+                        elif my_choice == "2":
+                            print("Your account balance is AMOUNT")
+                            sys.exit()
+                        else:
+                            print("Invalid choice. Please try again.")
+                            break
                 elif choice == "2":
-                    print("Airtime and Bundles - Internet Bundles")
-                    # Perform the desired action for purchasing internet bundles
-                    # Add your code here
+                    while True:
+                        my_choice = input("1. Buy Internet Bundle\n2. Check Data Balance\n")
+                        if my_choice == "1":
+                            amount = input("Amount: ")
+                            print(amount, " MB has been purchased to your account")
+                        elif my_choice == "2":
+                            print("Your account balance is AMOUNT")
+                            sys.exit()
+                        else:
+                            print("Invalid choice. Please try again.")
+                            break
                 elif choice == "3":
-                    print("Airtime and Bundles - For Friends and Family")
-                    # Perform the desired action for sending airtime to friends and family
-                    # Add your code here
+                    while True:
+                        number = input("Enter the number ")
+                        if len(number) == 10 and number.isdigit():
+                            amount = input("Amount: ")
+                            print(amount, "sent to user.\n", number, "Family is everything :)")
+                            sys.exit()
+                        else:
+                            print("Invalid Mobile Number. Please try again")
+                            break
                 elif choice == "4":
-                    print("Airtime and Bundles - Other Networks")
-                    # Perform the desired action for purchasing airtime for other networks
-                    # Add your code here
+                    while True:
+                        number = input("Enter the number ")
+                        if len(number) == 10 and number.isdigit():
+                            amount = input("Amount: ")
+                            print(amount, "sent to user", number)
+                            sys.exit()
+                        else:
+                            print("Invalid Mobile Number. Please try again")
+                            break
                 elif choice == "0":
                     print("Returning to previous menu...")
                     break
                 else:
                     print("Invalid choice. Please try again.")
-        elif transCode == "4":
+        elif trans_code == "4":
             while True:
                 print("""
                 1) Check Balance
@@ -127,41 +157,52 @@ def transEntry():
                 0) Back""")
                 choice = input("Enter your choice: ")
                 if choice == "1":
-                    print("My Wallet - Check Balance")
-                    # Perform the desired action for checking the balance
-                    # Add your code here
+                    while True:
+                        pin = input("Enter your 4-digit pin: ")
+                        if len(pin) == 4 and pin.isdigit():
+                            print("Your account balance is __GHC")
+                            sys.exit()
+                        else:
+                            print("Invalid pin. Please try again")
+                            break
                 elif choice == "2":
-                    print("My Wallet - My Statements")
-                    # Perform the desired action for viewing statements
-                    # Add your code here
+                    input("Your email :")
+                    print("Your wallet statement will be sent to your email")
                 elif choice == "3":
-                    print("My Wallet - Change Pin")
-                    # Perform the desired action for changing the PIN
-                    # Add your code here
+                    while True:
+                        current_code = input("Enter your current 4-digit code: ")
+                        if len(current_code) == 4 and current_code.isdigit():
+                            new_code = input("Enter your new 4-digit code: ")
+                            if len(new_code) == 4 and new_code.isdigit():
+                                print("Code changed successfully!")
+                                sys.exit()
+                            else:
+                                print("Invalid new code. Please enter a 4-digit code.")
+                        else:
+                            print("Invalid current code. Please enter a 4-digit code.")
                 elif choice == "4":
-                    print("My Wallet - Report Fraud")
-                    # Perform the desired action for reporting fraud
-                    # Add your code here
+                    input("Kindly state your complain: ")
+                    print("We will look into it and get right back to you")
                 elif choice == "0":
                     print("Returning to previous menu...")
                     break
                 else:
                     print("Invalid choice. Please try again.")
-        elif transCode == "0":
+        elif trans_code == "0":
             print("Exiting USSD...")
             break
         else:
             print("Invalid choice. Please try again.")
 
 
-def confirmUSSD():
+def confirm_ussd():
     ussd = input("Enter USSD code:")
     if ussd == "*111#":
-        transEntry()
+        trans_entry()
     else:
         print("UNKNOWN APPLICATION")
-        confirmUSSD()
+        confirm_ussd()
 
 
 # calling the function
-confirmUSSD()
+confirm_ussd()
