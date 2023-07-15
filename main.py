@@ -1,3 +1,4 @@
+import sys
 def transEntry():
     while True:
         transCode = input("""
@@ -12,26 +13,38 @@ def transEntry():
                 print("""
                 1) Momo User
                 2) Other Networks
-                3) Favorite
-                4) Bank Account
+                3) Bank Account
                 0) Back""")
                 choice = input("Enter your choice: ")
                 if choice == "1":
-                    print("Transfer Money - Momo User")
-                    # Perform the desired action for Momo User transfer
-                    # Add your code here
+                    while True:
+                        number = input("Enter the number ")
+                        if len(number) == 10 and number.isdigit():
+                            amount = input("Amount: ")
+                            print(amount, "sent to user", number)
+                            sys.exit()
+                        else:
+                            print("Invalid Mobile Number. Please try again")
+                            break
                 elif choice == "2":
-                    print("Transfer Money - Other Networks")
-                    # Perform the desired action for Other Networks transfer
-                    # Add your code here
+                    while True:
+                        number = input("Enter the number ")
+                        if len(number) == 10 and number.isdigit():
+                            amount = input("Amount: ")
+                            print(amount, "sent to user", number)
+                            sys.exit()
+                        else:
+                            print("Invalid Mobile Number. Please try again")
+                            break
                 elif choice == "3":
-                    print("Transfer Money - Favorite")
-                    # Perform the desired action for Favorite transfer
-                    # Add your code here
-                elif choice == "4":
-                    print("Transfer Money - Bank Account")
-                    # Perform the desired action for Bank Account transfer
-                    # Add your code here
+                    number = input("Account Number: ")
+                    if len(number) == 15 and number.isdigit():
+                        amount = input("Amount: ")
+                        print(amount, "sent to Bank Account", number)
+                        sys.exit()
+                    else:
+                        print("Invalid Bank Account Number. Please try again")
+                        break
                 elif choice == "0":
                     print("Returning to previous menu...")
                     break
@@ -45,13 +58,30 @@ def transEntry():
                 0) Back""")
                 choice = input("Enter your choice: ")
                 if choice == "1":
-                    print("Withdraw Money - From Agent")
-                    # Perform the desired action for withdrawal from an agent
-                    # Add your code here
+                    while True:
+                        number = input("Enter the Agent Number: ")
+                        if len(number) == 6 and number.isdigit():
+                            amount = input("Amount: ")
+                            PIN = input("Enter your 4-digit pin: ")
+                            if len(PIN) == 4 and PIN.isdigit():
+                                print(amount, "withdrawn from Agent Number:", number)
+                                sys.exit()
+                        else:
+                            print("Invalid Agent Number. Please try again")
+                            break
                 elif choice == "2":
-                    print("Withdraw Money - From ATM")
-                    # Perform the desired action for withdrawal from an ATM
-                    # Add your code here
+                    while True:
+                        number = input("Enter the ATM Number: ")
+                        if len(number) == 10 and number.isdigit():
+                            amount = input("Amount: ")
+                            PIN = input("Enter a 4-digit PIN: ")
+                            if len(PIN) == 4 and PIN.isdigit():
+                                print(amount, "withdrawn from ATM", number)
+                                sys.exit()
+                            else:
+                                print("Invalid PIN. Please try again.")
+                        else:
+                            print("Invalid ATM Number. Please try again.")
                 elif choice == "0":
                     print("Returning to previous menu...")
                     break
