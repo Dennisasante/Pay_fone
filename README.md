@@ -1,4 +1,4 @@
-# Mobile Money USSD Dummy
+# Mobile Money USSD Dummy : My first personal project
 
 ## Description
 The Mobile Money USSD Code System is an exciting project that I developed as a second-year college student learning Python programming. It's a beginner-friendly application that simulates a mobile money transaction menu using USSD codes. With this project, users can experience the world of financial transactions and gain hands-on experience in Python programming.
