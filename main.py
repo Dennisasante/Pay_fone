@@ -16,39 +16,72 @@ def trans_entry(menu_stack):
         if trans_code == "1":
             while True:
                 print("""
-                1) Momo User
-                2) Other Networks
-                3) Bank Account
-                0) Back""")
+                    1) Momo User
+                    2) Other Networks
+                    3) Bank Account
+                    0) Back""")
                 choice = input("Enter your choice: ")
                 if choice == "1":
                     while True:
-                        number = input("Enter the number: ")
+                        number = input("Enter the Momo Number: ")
                         if len(number) == 10 and number.isdigit():
-                            amount = input("Amount: ")
-                            print("You have successfully transferred GHC", amount, "to", number, "on", datetime.now())
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    break
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
+                            while True:
+                                pin = input("Enter your 4-digit pin: ")
+                                if len(pin) == 4 and pin.isdigit():
+                                    print("GHC", amount, "successfully transferred to", number, "on", datetime.now())
+                                    sys.exit()
+                                else:
+                                    print("Invalid pin. Please try again.")
                         else:
-                            print("Invalid Mobile Number. Please try again")
+                            print("Invalid Number. Please try again.")
                 elif choice == "2":
                     while True:
-                        number = input("Enter the number: ")
+                        number = input("Enter the Number: ")
                         if len(number) == 10 and number.isdigit():
-                            amount = input("Amount: ")
-                            print("Confirmed. GHC", amount, "sent to", number, "on", datetime.now())
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    break
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
+                            while True:
+                                pin = input("Enter your 4-digit pin: ")
+                                if len(pin) == 4 and pin.isdigit():
+                                    print("GHC", amount, "successfully transferred to", number, "on", datetime.now())
+                                    sys.exit()
+                                else:
+                                    print("Invalid pin. Please try again.")
                         else:
-                            print("Invalid Mobile Number. Please try again")
+                            print("Invalid Number. Please try again.")
                 elif choice == "3":
                     while True:
                         number = input("Account Number: ")
                         if len(number) == 15 and number.isdigit():
-                            amount = input("Amount: ")
-                            print("Your payment of GHS", amount, ".00 to BANK_PUSH has been completed at",
-                                  datetime.now(), "- Reference:", number)
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    break
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
+                            while True:
+                                pin = input("Enter your 4-digit pin: ")
+                                if len(pin) == 4 and pin.isdigit():
+                                    print("Your payment of GHS", amount, ".00 to BANK_PUSH has been completed at",
+                                          datetime.now(), "- Reference:", number)
+                                    sys.exit()
+                                else:
+                                    print("Invalid pin. Please try again.")
                         else:
-                            print("Invalid Bank Account Number. Please try again")
+                            print("Invalid Bank Account Number. Please try again.")
                 elif choice == "0":
                     if len(menu_stack) > 1:
                         print("Returning to previous menu...")
@@ -69,26 +102,40 @@ def trans_entry(menu_stack):
                     while True:
                         number = input("Enter the Agent Number: ")
                         if len(number) == 6 and number.isdigit():
-                            amount = input("Amount: ")
-                            pin = input("Enter your 4-digit pin: ")
-                            if len(pin) == 4 and pin.isdigit():
-                                print(amount, "withdrawn from Agent Number:", number, "on", datetime.now())
-                                sys.exit()
-                            else:
-                                print("Invalid pin. Please try again.")
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    break
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
+                            while True:
+                                pin = input("Enter your 4-digit pin: ")
+                                if len(pin) == 4 and pin.isdigit():
+                                    print(amount, "withdrawn from Agent Number:", number, "on", datetime.now())
+                                    sys.exit()
+                                else:
+                                    print("Invalid pin. Please try again.")
                         else:
                             print("Invalid Agent Number. Please try again.")
                 elif choice == "2":
                     while True:
                         number = input("Enter the ATM Number: ")
-                        if len(number) == 10 and number.isdigit():
-                            amount = input("Amount: ")
-                            pin = input("Enter a 4-digit pin: ")
-                            if len(pin) == 4 and pin.isdigit():
-                                print("Confirmed. GHC", amount, "withdrawn from ATM", number, "on", datetime.now())
-                                sys.exit()
-                            else:
-                                print("Invalid pin. Please try again.")
+                        if len(number) == 6 and number.isdigit():
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    break
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
+                            while True:
+                                pin = input("Enter a 4-digit pin: ")
+                                if len(pin) == 4 and pin.isdigit():
+                                    print("Confirmed. GHC", amount, "withdrawn from ATM", number, "on", datetime.now())
+                                    sys.exit()
+                                else:
+                                    print("Invalid pin. Please try again.")
                         else:
                             print("Invalid ATM Number. Please try again.")
                 elif choice == "0":
@@ -110,9 +157,14 @@ def trans_entry(menu_stack):
                     while True:
                         my_choice = input("1. Buy Airtime\n2. Check Balance\n Enter your choice : ")
                         if my_choice == "1":
-                            amount = input("Amount: ")
-                            print("Congratulations,GHC", amount, "has been purchased to your account as airtime")
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    print("Congratulations,GHC", amount, " purchased to your account as airtime")
+                                    sys.exit()
+                                else:
+                                    print("Invalid amount. Please enter a valid number.")
                         elif my_choice == "2":
                             print("Your account balance is GHC_____.00")
                             sys.exit()
@@ -122,9 +174,14 @@ def trans_entry(menu_stack):
                     while True:
                         my_choice = input("1. Buy Internet Bundle\n2. Check Data Balance\n Enter your choice : ")
                         if my_choice == "1":
-                            amount = input("Amount: ")
-                            print(amount, "MB has been purchased to your account")
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = int(amount_str)
+                                    print(amount, "MB has been purchased to your account")
+                                    sys.exit()
+                                else:
+                                    print("Invalid choice. Please try again.*111#")
                         elif my_choice == "2":
                             print("Your account balance is ______.MB")
                             sys.exit()
@@ -134,19 +191,29 @@ def trans_entry(menu_stack):
                     while True:
                         number = input("Enter the number: ")
                         if len(number) == 10 and number.isdigit():
-                            amount = input("Amount: ")
-                            print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now(),
-                                  ".Family is everything :)")
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now(),
+                                          ".Family is everything :)")
+                                    sys.exit()
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
                         else:
                             print("Invalid Mobile Number. Please try again")
                 elif choice == "4":
                     while True:
                         number = input("Enter the number: ")
                         if len(number) == 10 and number.isdigit():
-                            amount = input("Amount: ")
-                            print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now())
-                            sys.exit()
+                            while True:
+                                amount_str = input("Amount: ")
+                                if amount_str.isdigit():
+                                    amount = float(amount_str)
+                                    print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now())
+                                    sys.exit()
+                                else:
+                                    print("Invalid amount. Please enter a valid number")
                         else:
                             print("Invalid Mobile Number. Please try again")
                 elif choice == "0":
@@ -215,5 +282,6 @@ def confirm_ussd():
     else:
         print("UNKNOWN APPLICATION")
         confirm_ussd()
+
 
 confirm_ussd()
