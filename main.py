@@ -24,10 +24,10 @@ def trans_entry(menu_stack):
                 if choice == "1":
                     while True:
                         number = input("Enter the Momo Number: ")
-                        if len(number) == 10 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -44,10 +44,10 @@ def trans_entry(menu_stack):
                 elif choice == "2":
                     while True:
                         number = input("Enter the Number: ")
-                        if len(number) == 10 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -64,10 +64,10 @@ def trans_entry(menu_stack):
                 elif choice == "3":
                     while True:
                         number = input("Account Number: ")
-                        if len(number) == 15 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -101,10 +101,10 @@ def trans_entry(menu_stack):
                 if choice == "1":
                     while True:
                         number = input("Enter the Agent Number: ")
-                        if len(number) == 6 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -121,10 +121,10 @@ def trans_entry(menu_stack):
                 elif choice == "2":
                     while True:
                         number = input("Enter the ATM Number: ")
-                        if len(number) == 6 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -159,7 +159,7 @@ def trans_entry(menu_stack):
                         if my_choice == "1":
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     print("Congratulations,GHC", amount, " purchased to your account as airtime")
                                     sys.exit()
@@ -176,8 +176,8 @@ def trans_entry(menu_stack):
                         if my_choice == "1":
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
-                                    amount = int(amount_str)
+                                if amount_str <= "5000" and amount_str.isdigit():
+                                    amount = float(amount_str)
                                     print(amount, "MB has been purchased to your account")
                                     sys.exit()
                                 else:
@@ -190,10 +190,10 @@ def trans_entry(menu_stack):
                 elif choice == "3":
                     while True:
                         number = input("Enter the number: ")
-                        if len(number) == 10 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now(),
                                           ".Family is everything :)")
@@ -205,10 +205,10 @@ def trans_entry(menu_stack):
                 elif choice == "4":
                     while True:
                         number = input("Enter the number: ")
-                        if len(number) == 10 and number.isdigit():
+                        if len(number) == 5 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str.isdigit():
+                                if amount_str <= "5000" and amount_str.isdigit():
                                     amount = float(amount_str)
                                     print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now())
                                     sys.exit()
