@@ -24,7 +24,7 @@ def trans_entry(menu_stack):
                 if choice == "1":
                     while True:
                         number = input("Enter the Momo Number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -44,7 +44,7 @@ def trans_entry(menu_stack):
                 elif choice == "2":
                     while True:
                         number = input("Enter the Number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -64,7 +64,7 @@ def trans_entry(menu_stack):
                 elif choice == "3":
                     while True:
                         number = input("Account Number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 13 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -101,7 +101,7 @@ def trans_entry(menu_stack):
                 if choice == "1":
                     while True:
                         number = input("Enter the Agent Number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 6 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -121,7 +121,7 @@ def trans_entry(menu_stack):
                 elif choice == "2":
                     while True:
                         number = input("Enter the ATM Number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 6 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -190,7 +190,7 @@ def trans_entry(menu_stack):
                 elif choice == "3":
                     while True:
                         number = input("Enter the number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
@@ -205,7 +205,7 @@ def trans_entry(menu_stack):
                 elif choice == "4":
                     while True:
                         number = input("Enter the number: ")
-                        if len(number) == 5 and number.isdigit():
+                        if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
