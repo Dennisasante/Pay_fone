@@ -64,7 +64,7 @@ def trans_entry(menu_stack):
                 elif choice == "3":
                     while True:
                         number = input("Account Number: ")
-                        if len(number) == 13 and number.isdigit():
+                        if len(number) == 12 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
                                 if amount_str <= "5000" and amount_str.isdigit():
