@@ -27,7 +27,7 @@ def trans_entry(menu_stack):
                         if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -47,7 +47,7 @@ def trans_entry(menu_stack):
                         if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -67,7 +67,7 @@ def trans_entry(menu_stack):
                         if len(number) == 12 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -104,7 +104,7 @@ def trans_entry(menu_stack):
                         if len(number) == 6 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -124,7 +124,7 @@ def trans_entry(menu_stack):
                         if len(number) == 6 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     break
                                 else:
@@ -159,7 +159,7 @@ def trans_entry(menu_stack):
                         if my_choice == "1":
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     print("Congratulations,GHC", amount, " purchased to your account as airtime")
                                     sys.exit()
@@ -176,7 +176,7 @@ def trans_entry(menu_stack):
                         if my_choice == "1":
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     print(amount, "MB has been purchased to your account")
                                     sys.exit()
@@ -193,7 +193,7 @@ def trans_entry(menu_stack):
                         if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now(),
                                           ".Family is everything :)")
@@ -208,7 +208,7 @@ def trans_entry(menu_stack):
                         if len(number) == 10 and number.isdigit():
                             while True:
                                 amount_str = input("Amount: ")
-                                if amount_str <= "5000" and amount_str.isdigit():
+                                if amount_str.isdigit() and float(amount_str) <= 5000:
                                     amount = float(amount_str)
                                     print("GHC", amount, ".00 airtime sent to user", number, "on", datetime.now())
                                     sys.exit()
